@@ -17,3 +17,16 @@ Script that installs Kismet
     ./install_kismet
 
 # monitor_mode
+On my Pi Zero W wlan0 is the built in wireless interface, the interface I put into monitor mode is wlan1. 
+
+This script brings the interface `wlan1` down, pops it into monitor mode and then brings it back up - ready to be used by aircrack or kismet.
+
+You will need to
+
+    chmod +x monitor_mode
+
+before you can run it.
+
+	./monitor_mode
+
+If your wireless interface is not called `wlan1` you will need to rename it in the script.
