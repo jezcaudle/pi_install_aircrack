@@ -12,3 +12,8 @@ Only tested on a Pi Zero W - YMMV
 
 # install_kismet
 Script that installs Kismet
+
+    chmod +x install_kismet
+    ./install_kismet
+
+# monitor_mode
