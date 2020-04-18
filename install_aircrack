@@ -1,0 +1,18 @@
+sudo apt-get install git bc raspberrypi-kernel-headers dkms autoconf libtool automake libssl-dev -y
+wget https://download.aircrack-ng.org/aircrack-ng-1.6.tar.gz
+tar -zxvf aircrack-ng-1.6.tar.gz
+cd aircrack-ng-1.6
+autoreconf -i
+./configure --with-experimental
+make
+sudo make install
+sudo ldconfig
+
+cd /tmp
+git clone -b v5.6.4.2 https://github.com/aircrack-ng/rtl8812au.git
+cd rtl*
+
+sed -i 's/CONFIG_PLATFORM_I386_PC = y/CONFIG_PLATFORM_I386_PC = n/g' Makefile
+sed -i 's/CONFIG_PLATFORM_ARM_RPI = n/CONFIG_PLATFORM_ARM_RPI = y/g' Makefile
+
+sudo ./dkms-install.sh
