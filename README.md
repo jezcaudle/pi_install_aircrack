@@ -6,3 +6,9 @@ The script installs the required dependecies and then downloads the source code 
 It then downloads, compiles and installs the driver for the rtl8812au.
 
 Only tested on a Pi Zero W - YMMV
+
+    chmod +x install_aircrack
+    ./install_aircrack
+
+# install_kismet
+Script that installs Kismet
