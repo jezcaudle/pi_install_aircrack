@@ -5,7 +5,7 @@ The script installs the required dependecies and then downloads the source code 
 
 It then downloads, compiles and installs the driver for the rtl8812au.
 
-Only tested on a Pi Zero W - YMMV
+Only tested on a Pi Zero W - YMMV - I think some of the settings are for Zero only.
 
     chmod +x install_aircrack
     ./install_aircrack
@@ -30,3 +30,5 @@ before you can run it.
 	./monitor_mode
 
 If your wireless interface is not called `wlan1` you will need to rename it in the script.
+
+All of these scripts have been copied from other GitHub pages, StackOverflow etc.
